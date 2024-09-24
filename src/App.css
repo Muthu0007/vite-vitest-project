@@ -1,0 +1,99 @@
+body {
+    background-color: black;
+    height: 100vh;
+    margin: 0;
+    font-family: 'circular';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.scroll-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 2em;
+}
+
+.text {
+    opacity: 0;
+    color: #0decf4;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+@keyframes leftToRight {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.left-to-right {
+    animation: leftToRight 2s ease forwards;
+}
+
+p {
+    color: white;
+}
+
+.form {
+    position: relative;
+    display: flex;
+    gap: 10px;
+
+}
+form{
+    position: relative;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.form_input {
+    padding: 12px;
+    box-sizing: border-box;
+    border: 0.5px solid #0decf4;
+    border-radius: 5px;
+    outline: none;
+    background: transparent;
+    color: white;
+}
+
+.form_label {
+    position: absolute;
+    color: white;
+    top: 10px;
+    left: 20px;
+}
+
+.form_input:focus + .form_label,
+.form_input:not(:placeholder-shown).form_input:not(:focus) ~ .form_label {
+    top: -10px;
+    font-size: 14px;
+    transition: top 200ms ease, font-size 200ms ease;
+    background-color: black;
+}
+
+.button {
+    background-color: #0decf4;
+    font-weight: 600;
+}
+.dashbtn{
+    color: black;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background-color: white;
+}

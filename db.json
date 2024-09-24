@@ -1,0 +1,10 @@
+{
+    "users": [
+      { "id": 1, "name": "John Doe" },
+      { "id": 2, "name": "Jane Smith" }
+    ],
+    "customer":[
+      { "id": 1, "name": "dev Doe" },
+      { "id": 2, "name": "carol Smith" }
+    ]
+  }
